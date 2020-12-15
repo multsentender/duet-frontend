@@ -1,12 +1,12 @@
 import axios from 'axios'
 
 export const FETCHFAVORITE = 'FATCH_FAVORITE'
-export const SETFAVORITE = 'SET_FAVORITE'
+export const SETHOME = 'SET_HOME'
 export const SETLOADED = 'SET_LOADED'
 
 export const setFavorite = (payload) => {
     return{
-        type: SETFAVORITE,
+        type: SETHOME,
         payload
     }
 }
@@ -19,7 +19,7 @@ export const setLoaded = (payload) => {
 }
 
 export const fetchFavorite = () => (dispacth) => {
-    dispacth(setLoaded(true))
+    dispacth(setLoaded(false))
 
     axios.get('http://localhost:3003/api/').then(data => setFavorite(data))
 }

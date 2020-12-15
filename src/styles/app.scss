@@ -1,0 +1,240 @@
+@import 'normalize';
+@import 'variable';
+@import './components/index';
+@import 'media';
+
+.page {
+  padding-top: 8vh;
+  .main-back {
+    background: url('../assets/img/mainback2.png') no-repeat;
+    width: 100%;
+    height: 92vh;
+    background-size: cover;
+    animation: closer 15s infinite ease-in-out;
+
+
+    .maintext {
+      height: 100%;
+      max-width: 1300px;
+      margin: 0 auto;
+      color: $white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      
+
+      h2 {
+        font-size: 64px;
+        font-weight: bold;
+        max-width: 50%;
+        letter-spacing: 6px;
+        @include adaptiv-value("font-size", 64, 10, 0);
+
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 400;
+        max-width: 42%;
+        padding-bottom: 80px;
+        padding-top: 60px;
+        line-height: 30px;
+      }
+
+      button {
+        min-width: 250px;
+        height: 45px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        background-color: rgba($white, 0.6);
+        font-weight: bold;
+        transition: all 0.2s ease-in-out;
+
+        span {
+          opacity: 1;
+          color: $black;
+        }
+
+        &:hover {
+          background-color: rgba($white, 1);
+        }
+      }
+    }
+  }
+
+  .infopage {
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .infotext {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 64px;
+        font-weight: 400;
+        color: $black;
+        letter-spacing: 6px;
+        position: relative;
+        display: block;
+        width: 65%;
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -10px;
+          width: 40%;
+          height: 4px;
+          background-color: $pink;
+          border-radius: 2px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        width: 65%;
+        color: $black;
+        line-height: 25px;
+        font-weight: 400;
+      }
+    }
+
+    img {
+      max-height: 450px;
+      max-width: 450px;
+      box-shadow: -8px 10px 15px rgb(199, 199, 199);
+    }
+  }
+}
+
+
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  margin: 0 0 30px 0;
+  display: block;
+  position: relative;
+}
+
+.active {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $pink;
+  }
+}
+
+.services-all {
+  height: 92vh;
+  background-color: $back-white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.present_block {
+  width: 100%;
+  height: 50vh;
+  background: url('../assets/img/videoBack.png') no-repeat center;
+  background-size: cover;
+  color: $white;
+
+  .present {
+    height: 100%;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h4 {
+      font-size: 36px;
+      font-weight: bold;
+      letter-spacing: 6px;
+      text-align: center;
+    }
+
+    &_line {
+      margin: 20px 0;
+      border-bottom: 4px solid $white;
+      width: 36%;
+      border-radius: 20px;
+    }
+
+    &_text {
+      text-align: center;
+      line-height: 20px;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    &_btn {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: url('../assets/icon/video-play_btn.svg');
+    }
+  }
+}
+
+.text_block {
+  background-color: $pink;
+  height: 32vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+
+  p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    max-width: 1200px;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      bottom: -50%;
+      transform: translateX(-50%);
+      width: 20%;
+      height: 4px;
+      background-color: $white;
+      border-radius: 2px;
+    }
+  }
+
+  div {
+    border-bottom: 4px solid white;
+    width: 16%;
+    border-radius: 20px;
+    margin-top: 40px;
+  }
+}
+
+
+@keyframes closer{
+    0%{
+        background-size: 100%
+    }
+    50%{
+        background-size: 102%;
+    }
+    100%{
+        background-size: 100%;
+    }
+}

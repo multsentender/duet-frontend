@@ -1,4 +1,5 @@
-export {default as Header} from './Home/Header'
-export {default as Footer} from './Home/Footer'
+export {default as Header} from './Header'
+export {default as Footer} from './Footer'
 export {default as ProductSlider} from './Home/ProductSlider'
 export {default as Gallery} from './Home/Gallery'
+export {default as Services} from './Home/Services'

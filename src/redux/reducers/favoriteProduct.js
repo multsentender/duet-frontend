@@ -1,16 +1,19 @@
-import {SETFAVORITE, SETLOADED} from '../actions/favoriteProducts'
+import {SETHOME, SETLOADED} from '../actions/favoriteProducts'
 
 const initialState = {
-    favoriteItems: [],
+    data: {
+        favoriteItems: [],
+        gallery: []
+    },
     isLoaded: true
 }
 
 const favorite = (state = initialState, action) => {
     switch(action.type) {
-        case SETFAVORITE: 
+        case SETHOME: 
             return{
                 ...state,
-                favoriteItems: action.payload,
+                
                 isLoaded: false 
             };
         case SETLOADED:

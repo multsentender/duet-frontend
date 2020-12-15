@@ -3,7 +3,7 @@ import {Route} from 'react-router-dom'
 import {Home} from './pages'
 import {ProductCart} from './components'
 
-import './styles/style.scss'
+import './styles/app.scss'
 
 function App() {
   return (
