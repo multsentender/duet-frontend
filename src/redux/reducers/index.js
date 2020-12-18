@@ -1,8 +1,8 @@
 import {combineReducers} from 'redux'
-import favorite from './favoriteProduct'
+import data from './data'
 
 const rootReducer = combineReducers({
-    favorite
+    data
 })
 
 export default rootReducer

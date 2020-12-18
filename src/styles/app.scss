@@ -125,14 +125,6 @@ h2 {
   position: relative;
 }
 
-.active {
-  &:hover,
-  &:focus,
-  &:active {
-    color: $pink;
-  }
-}
-
 .services-all {
   height: 92vh;
   background-color: $back-white;
@@ -195,7 +187,6 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
 
   p {
     font-size: 24px;

@@ -1,2 +1,7 @@
+export {default as Header} from './Header'
+export {default as Footer} from './Footer'
 export {default as WrappedMap} from './Map'
-export {default as ProductCart} from './ProduceCart'
+export {default as Gallery} from './Home/Gallery'
+export {default as ProductSlider} from './Home/ProductSlider'
+export {default as ProductCart} from './ProductCart/index'
+export {default as Services} from './Home/Services'
