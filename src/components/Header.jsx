@@ -1,5 +1,6 @@
 import React from 'react';
-import {Link} from 'react-scroll'
+import {Link as ScroleLink} from 'react-scroll'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     const [style, setStyle] = React.useState(0)
@@ -42,46 +43,21 @@ const Header = () => {
             <div className="main-header">
                 <nav className="container">
                     <div className="logo">
-                        <h1>Duet</h1>
+                        <Link to='/'>
+                            <h1>Duet</h1>
+                        </Link>
                     </div>
                     <ul className='nav-links'>
-                        <Link
-                            activeClass="active"
-                            to="main"
-                            spy={true}
-                            smooth={true}
-                            offset={-75}
-                            duration={500}>
-                        Главная
+                            <Link to="/">
+                                Главная
+                            </Link>
+                        <Link to="/store">
+                            Магазин
                         </Link>
-                        <Link
-                            activeClass="active"
-                            to="about"
-                            spy={true}
-                            smooth={true}
-                            offset={-75}
-                            duration={500}>
-                        О нас
+                        <Link to="/cart">
+                            Корзина
                         </Link>
-                        <Link
-                            activeClass="active"
-                            to="service"
-                            spy={true}
-                            smooth={true}
-                            offset={-75}
-                            duration={500}>
-                        Услуги
-                        </Link>
-                        <Link
-                            activeClass="active"
-                            to="products"
-                            spy={true}
-                            smooth={true}
-                            offset={-75}
-                            duration={500}>
-                        Товары
-                        </Link>
-                        <Link
+                        <ScroleLink
                             activeClass="active"
                             to="contact"
                             spy={true}
@@ -89,7 +65,7 @@ const Header = () => {
                             offset={-75}
                             duration={500}>
                         Контакты
-                        </Link>
+                        </ScroleLink>
                     </ul>
                     <div className="burger">
                         <div className="burger__item"></div>
